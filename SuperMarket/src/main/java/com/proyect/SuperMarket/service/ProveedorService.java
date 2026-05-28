@@ -87,6 +87,7 @@ public class ProveedorService {
 
         if (!producto.getProveedores().contains(proveedor)) {
             producto.getProveedores().add(proveedor);
+        }
         
         producto.setStock(producto.getStock() + dto.getCantidad());
         productoRepository.save(producto);
