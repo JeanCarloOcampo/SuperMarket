@@ -24,6 +24,12 @@ public class Proveedor {
     @Column(nullable = false, unique = true, length = 20)
     private String nit;
 
+    @Column(length = 100)
+    private String email;
+
+    @Column(length = 20)
+    private String telefono;
+
     @ManyToMany
     @JoinTable(
         name = "producto_proveedor",
